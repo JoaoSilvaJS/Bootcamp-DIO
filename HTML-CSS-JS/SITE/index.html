@@ -4,21 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formlário de cadastro</title>
+    <style>
+        .row{
+            margin: 5px;
+        }
+
+        label{
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+            padding-right: 5px;
+        }
+
+        fieldset{
+            margin: 10px;
+            border-radius: 5px;
+            border-color: red;
+        }
+
+    </style>
 </head>
 <body>
+    <h1>Formulário de cadastro</h1>
+
     <form action="" name="cadastro" method="post">
-        <label for="idnome">Nome</label>
-        <input type="text" name="nome" id="idnome"><br>
-        <br>
-        <label for="ididade">Idade:</label>
-        <input type="number" name="idade" id="ididade"><br>
-        <br>
-        <label for="idsenha">Senha:</label>
-        <input type="password" name="senha" id="idsenha"><br>
+
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <div class="row">
+                <label for="idnome">Nome:</label>
+                <input type="text" name="nome" id="idnome">
+            </div>
+            <div class="row">
+                <label for="iprofissao">Profissão:</label>
+                <input type="text" name="profissao" id="iprofissao">
+            </div>
+            <div class="row">
+                <label for="imail">E-mail:</label>
+                <input type="email" name="mail" id="imail">
+            </div>
+            <div class="row">
+                <label for="iempresa">Empresa:</label>
+                <input type="text" name="empresa" id="iempresa">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="row">
+                <label for="iendereco">Endereço:</label>
+                <input type="text" name="endereco" id="iendereco">
+            </div>
+
+            <div class="row">
+                <label for="icidade">Cidade/UF:</label>
+                <input type="text" name="cidade" id="icidade">
+            </div class="row">
+
+            <div class="row">
+                <label for="ibairro">Bairro:</label>
+                <input type="text" name="bairro" id="ibairro">
+            </div class="row">
+
+            <div class="row">
+                <label for="icelular">Celular:</label>
+                <input type="tel" name="celular" id="icelular">
+            </div>
+
+            <div class="row">
+                <label for="inumero">Número:</label>
+                <input type="number" name="numero" id="inumero" min="0" max="9999">
+            </div>
+            <div class="row">
+                <label for="ilinkedin">Linkedin:</label>
+                <input type="text" name="linkedin" id="ilinkedin">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações de contato</legend>
+            <div class="row">
+                <label for="iwhatsapp">Whatsapp:</label>
+                <input type="number" name="whatsapp" id="iwhatsapp">
+            </div>
+            <div class="row">
+                <label for="igithub">GitHub:</label>
+                <input type="text" name="github" id="igithub">
+            </div>
+            <div class="row">
+                <label for="ifacebook">Facebook:</label>
+                <input type="password" name="facebook" id="ifacebook">
+            </div>
+        </fieldset>
 
         <br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Enviar</button>
         <button type="reset">Limpar</button>
     </form>
 </body>
